@@ -1,0 +1,9 @@
+pipelineJob('devops-CreateUser') {
+	disabled(shouldDisable = false)
+	description('Pipeline Create User')
+	parameters {
+		stringParam('USERNAME','','Username')
+		stringParam('FULLNAME','','Full Name')
+		choiceParam('USER_TYPE', ['Default (default)','Administrator'],'Account Type')
+	}
+}
